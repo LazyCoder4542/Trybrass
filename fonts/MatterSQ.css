@@ -2,46 +2,46 @@
     font-family: 'Matter SQ';
     font-style: normal;
     font-weight: 300;
-    src: local('Matter SQ Light'), url('https://static.trybrass.com/assets/fonts/MatterSQ-Light.woff2') format('woff2'),
-      url('https://static.trybrass.com/assets/fonts/MatterSQ-Light.woff') format('woff');
+    src: local('Matter SQ Light'), url('MatterSQ-Light.woff2') format('woff2'),
+      url('MatterSQ-Light.woff') format('woff');
   }
 
 @font-face {
     font-family: 'Matter SQ';
     font-style: normal;
     font-weight: 400;
-    src: local('Matter SQ Regular'), url('https://static.trybrass.com/assets/fonts/MatterSQ-Regular.woff2') format('woff2'),
-      url('https://static.trybrass.com/assets/fonts/MatterSQ-Regular.woff') format('woff');
+    src: local('Matter SQ Regular'), url('MatterSQ-Regular.woff2') format('woff2'),
+      url('MatterSQ-Regular.woff') format('woff');
   }
 
 @font-face {
     font-family: 'Matter SQ';
     font-style: normal;
     font-weight: 500;
-    src: local('Matter SQ Medium'), url('https://static.trybrass.com/assets/fonts/MatterSQ-Medium.woff2') format('woff2'),
-      url('https://static.trybrass.com/assets/fonts/MatterSQ-Medium.woff') format('woff');
+    src: local('Matter SQ Medium'), url('MatterSQ-Medium.woff2') format('woff2'),
+      url('MatterSQ-Medium.woff') format('woff');
   }
 
 @font-face {
     font-family: 'Matter SQ';
     font-style: normal;
     font-weight: 600;
-    src: local('Matter SQ SemiBold'), url('https://static.trybrass.com/assets/fonts/MatterSQ-SemiBold.woff2') format('woff2'),
-      url('https://static.trybrass.com/assets/fonts/MatterSQ-SemiBold.woff') format('woff');
+    src: local('Matter SQ SemiBold'), url('MatterSQ-SemiBold.woff2') format('woff2'),
+      url('MatterSQ-SemiBold.woff') format('woff');
   }
 
 @font-face {
     font-family: 'Matter SQ';
     font-style: normal;
     font-weight: 700;
-    src: local('Matter SQ Bold'), url('https://static.trybrass.com/assets/fonts/MatterSQ-Bold.woff2') format('woff2'),
-      url('https://static.trybrass.com/assets/fonts/MatterSQ-Bold.woff') format('woff');
+    src: local('Matter SQ Bold'), url('MatterSQ-Bold.woff2') format('woff2'),
+      url('MatterSQ-Bold.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Matter SQ';
     font-style: normal;
     font-weight: 800;
-    src: local('Matter SQ Heavy'), url('https://static.trybrass.com/assets/fonts/MatterSQ-Heavy.woff2') format('woff2'),
-      url('https://static.trybrass.com/assets/fonts/MatterSQ-Heavy.woff') format('woff');
+    src: local('Matter SQ Heavy'), url('MatterSQ-Heavy.woff2') format('woff2'),
+      url('MatterSQ-Heavy.woff') format('woff');
 }

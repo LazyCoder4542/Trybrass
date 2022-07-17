@@ -1,0 +1,61 @@
+$ff-body: "Matter SQ"
+:root
+    --clr-primary: #0bce5a
+    --page-margin: 20px
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body
+    min-height: 100vh
+    font-family: $ff-body
+#hamburger
+    width: 20px
+    height: 15px
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: 0.5s ease-in-out
+    -moz-transition: 0.5s ease-in-out
+    -o-transition: 0.5s ease-in-out
+    transition: 0.5s ease-in-out
+    cursor: pointer
+    display: flex
+    flex-wrap: wrap
+    align-content: space-between
+    span
+        display: block
+        height: 3px
+        width: 100%
+        background: var(--clr-primary)
+        border-radius: 9px
+        opacity: 1
+        left: 0
+        -webkit-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        -webkit-transition: 0.25s ease-in-out
+        -moz-transition: 0.25s ease-in-out
+        -o-transition: 0.25s ease-in-out
+        transition: 0.25s ease-in-out
+        -webkit-transform-origin: left center
+        -moz-transform-origin: left center
+        -o-transform-origin: left center
+        transform-origin: left center
+    &.open
+        span
+            &:nth-child(1)
+                -webkit-transform: rotate(45deg)
+                -moz-transform: rotate(45deg)
+                -o-transform: rotate(45deg)
+                transform: rotate(45deg)
+            &:nth-child(2)
+                width: 0%
+                opacity: 0
+            &:nth-child(3)
+                -webkit-transform: rotate(-45deg) translate(-5%, 60%)
+                -moz-transform: rotate(-45deg) translate(-5%, 60%)
+                -o-transform: rotate(-45deg) translate(-5%, 60%)
+                transform: rotate(-45deg) translate(-5%, 60%)
