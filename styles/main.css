@@ -8,6 +8,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::selection {
+  background-color: var(--clr-primary);
+  color: white;
+}
 
 body {
   min-height: 100vh;
@@ -15,6 +19,7 @@ body {
 }
 
 #hamburger {
+  position: fixed;
   width: 20px;
   height: 15px;
   -webkit-transform: rotate(0deg);

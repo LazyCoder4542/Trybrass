@@ -6,10 +6,15 @@ $ff-body: "Matter SQ"
     margin: 0
     padding: 0
     box-sizing: border-box
+    &::selection
+        background-color: var(--clr-primary)
+        color: white
 body
     min-height: 100vh
     font-family: $ff-body
 #hamburger
+    position: fixed
+    //-webkit-backface-visibility: hidden
     width: 20px
     height: 15px
     -webkit-transform: rotate(0deg)
