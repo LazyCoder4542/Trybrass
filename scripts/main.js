@@ -1,5 +1,4 @@
 $('html, body').addClass('scroll-paused')
-$('#loading-screen').css({'top': window.scrollY})
 $(window).on('load', function() {
     console.log('Window Loaded');
     setTimeout(() => {
@@ -9,7 +8,6 @@ $(window).on('load', function() {
     }, 2000);
 });
 $(document).ready(function() {
-    //$('#loading-screen').hide()
     console.log('DOM ready')
     $('#hamburger').click(function() {
         $('#hamburger').toggleClass('open')

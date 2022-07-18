@@ -19,7 +19,6 @@ body {
 }
 
 #hamburger {
-  position: fixed;
   width: 20px;
   height: 15px;
   -webkit-transform: rotate(0deg);
