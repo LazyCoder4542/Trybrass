@@ -52,9 +52,14 @@ class pageContent {
         $('#needs #scroll-navigation span').each(
             function (index) {
                 $(this).click(function() {
-                    //$(this).siblings().removeClass('active')
-                    //$(this).addClass('active');
                     self.videosNeeds(index)
+                })
+            }
+        );
+        $('#testimonials #scroll-navigation-testimonials span').each(
+            function (index) {
+                $(this).click(function() {
+                    self.testimonials(index)
                 })
             }
         );
@@ -72,6 +77,8 @@ class pageContent {
         $('#testimony')[0].innerText = data["testimony"]
         $('#testimonial-name')[0].innerText = data["testimonial-name"]
         $('#company-icon')[0].src = data["company-icon"]
+        $('#testimonials #scroll-navigation-testimonials span').removeClass('active')
+        $(`#testimonials #scroll-navigation-testimonials span:nth-child(${i + 1})`).addClass('active')
 
     }
 }
