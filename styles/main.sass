@@ -1,7 +1,8 @@
 $ff-body: "Matter SQ"
 :root
     --clr-primary: #0bce5a
-    --page-margin: 20px
+    --clr-neutral: #060809
+    --page-margin: 16px
 *
     margin: 0
     padding: 0
@@ -12,6 +13,20 @@ $ff-body: "Matter SQ"
 body
     min-height: 100vh
     font-family: $ff-body
+    color: var(--clr-neutral)
+    text-align: center
+    line-height: 1.3em
+h1, h2, h3, h4
+    font-weight: 600
+    line-height: 1.3em
+h1
+    font-size: 1.9rem
+    letter-spacing: -1px
+    line-height: 1.5em
+h2
+    font-size: 1.7rem
+p
+    font-size: 0.95rem
 #hamburger
     width: 20px
     height: 15px
@@ -29,10 +44,11 @@ body
     align-content: space-between
     span
         display: block
-        height: 3px
+        height: 0px
+        border: 0.5px white solid
         width: 100%
-        background: var(--clr-primary)
-        border-radius: 9px
+        background-color: white
+        border-radius: 20px
         opacity: 1
         left: 0
         -webkit-transform: rotate(0deg)
@@ -61,4 +77,52 @@ body
                 -webkit-transform: rotate(-45deg) translate(-5%, 60%)
                 -moz-transform: rotate(-45deg) translate(-5%, 60%)
                 -o-transform: rotate(-45deg) translate(-5%, 60%)
-                transform: rotate(-45deg) translate(-5%, 60%)
+                transform: rotate(-45deg) translate(-5%, 40%)
+
+#site-header
+    width: 100%
+    height: 80px
+    background: var(--clr-neutral)
+    display: flex
+    padding: 0 var(--page-margin)
+    justify-content: space-between
+    align-items: center
+    //align
+    position: fixed
+    z-index: 1
+#container
+    position: relative
+    top: 80px
+section
+    padding: 0 var(--page-margin) 64px
+    & + section
+        padding-top: 48px
+    section
+        padding: 0
+#hero
+    color: white
+    background-color: var(--clr-neutral)
+    text-align: left
+    p.sub
+        margin: 24px 0 48px
+    .sponsors
+        margin-top: 88px
+        display: flex
+        justify-content: space-between
+        width: 100%
+        overflow: hidden
+        img
+            height: 20px
+
+
+#sign-up
+    background: var(--clr-primary)
+    width: 100%
+    height:80px
+    justify-content: center
+    display: flex
+    align-items: center
+    color: white
+    position: fixed
+    bottom: 0
+    z-index: 1

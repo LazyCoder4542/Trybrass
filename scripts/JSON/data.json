@@ -1,0 +1,28 @@
+{
+    "video-slide": [
+        "videos/Payments.mp4",
+        "videos/Invoices.mp4",
+        "videos/CashflowSupport.mp4",
+        "videos/Integrations.mp4",
+        "videos/CashflowSupport.mp4"],
+    "testimonials": [
+        {
+            "testimonial-image": "images/simi-hustler.png",
+            "testimony": "“We have to move really fast with our portfolio companies and Brass has helped us validate a lot of ideas and turned them to businesses with the ease of creating sub-accounts.”",
+            "testimonial-name": "Simi Adejumo, Hustler Capital",
+            "company-icon": "images/hustler-capital.png"
+        },
+        {
+            "testimonial-image": "images/olakunbi-odu.png",
+            "testimony": "“The ease of opening an account completely won me over. The app is very easy to navigate and it’s obvious they have the best interests of SMEs at heart. I’m proud to call them my bank.”",
+            "testimonial-name": "Olakunbi Adedipe, Odu Fashion",
+            "company-icon": "images/odu-fashion.png"
+        },
+        {
+            "testimonial-image": "images/feranmi-nifries.png",
+            "testimony": "“Brass, with the sub-accounts feature, makes it easy to segment our cash and in turn optimise it for targeted goals.”",
+            "testimonial-name": "Feranmi Ajetunmobi, Ni-Fries",
+            "company-icon": "images/ni-fries.png"
+        }
+    ]
+}
