@@ -12,6 +12,8 @@ $ff-body: "Matter SQ"
         background-color: var(--clr-primary)
         color: white
 body
+    -webkit-font-smoothing: antialiased
+    scroll-behavior: smooth
     min-height: 100vh
     font-family: $ff-body
     color: var(--clr-neutral-1)
@@ -137,6 +139,8 @@ section
             margin-bottom: 32px
         .videos
             video
+                background-color: #ebedee
+                min-height: calc((100vw - 2*(var(--page-margin))) * (369.733)/(343.466))
                 border-radius: 8px
                 width: 100%
                 max-width: 480px
@@ -153,6 +157,9 @@ section
                 margin: 8px
                 &.active
                     background-color: var(--clr-neutral-1)
+        #current-video
+            p
+                color: #8f96a3
         #scroll-navigation-desktop
             display: none
 

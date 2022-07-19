@@ -16,6 +16,8 @@
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
   min-height: 100vh;
   font-family: "Matter SQ";
   color: var(--clr-neutral-1);
@@ -170,6 +172,8 @@ section section {
   margin-bottom: 32px;
 }
 #features #needs .videos video {
+  background-color: #ebedee;
+  min-height: calc((100vw - 2 * (var(--page-margin))) * 369.733 / 343.466);
   border-radius: 8px;
   width: 100%;
   max-width: 480px;
@@ -189,6 +193,9 @@ section section {
 }
 #features #needs #scroll-navigation span.active {
   background-color: var(--clr-neutral-1);
+}
+#features #needs #current-video p {
+  color: #8f96a3;
 }
 #features #needs #scroll-navigation-desktop {
   display: none;

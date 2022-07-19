@@ -45,9 +45,19 @@ class pageContent {
         this.data = data
     }
     initialize() {
+        let self = this
         console.log(this.data)
         this.videosNeeds(0)
         this.testimonials(0)
+        $('#needs #scroll-navigation span').each(
+            function (index) {
+                $(this).click(function() {
+                    //$(this).siblings().removeClass('active')
+                    //$(this).addClass('active');
+                    self.videosNeeds(index)
+                })
+            }
+        );
     }
     videosNeeds(i) {
         let data = this.data["video-slide"][i]
@@ -65,10 +75,3 @@ class pageContent {
 
     }
 }
-$('#needs #scroll-navigation span').click(function (e) { 
-    console.log(e.target);
-    console.log(e.target.parentElement.children)
-    //console.log(e.target.indexOf(e.target.parentElement.children))
-    document.querySelector()
-    
-});
