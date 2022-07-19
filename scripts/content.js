@@ -52,6 +52,9 @@ class pageContent {
     videosNeeds(i) {
         let data = this.data["video-slide"][i]
         $('#needs .videos video')[0].src = data
+        $('#needs #current-video')[0].innerHTML = $(`#needs #scroll-navigation-desktop span:nth-child(${i + 1})`)[0].innerHTML
+        $('#needs #scroll-navigation span').removeClass('active')
+        $(`#needs #scroll-navigation span:nth-child(${i + 1})`).addClass('active')
     }
     testimonials(i) {
         let data = this.data["testimonials"][i]
@@ -62,3 +65,10 @@ class pageContent {
 
     }
 }
+$('#needs #scroll-navigation span').click(function (e) { 
+    console.log(e.target);
+    console.log(e.target.parentElement.children)
+    //console.log(e.target.indexOf(e.target.parentElement.children))
+    document.querySelector()
+    
+});

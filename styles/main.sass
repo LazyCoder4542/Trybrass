@@ -1,7 +1,8 @@
 $ff-body: "Matter SQ"
 :root
     --clr-primary: #0bce5a
-    --clr-neutral: #060809
+    --clr-neutral-1: #060809
+    --clr-neutral-2: #d3d3d3
     --page-margin: 16px
 *
     margin: 0
@@ -13,18 +14,19 @@ $ff-body: "Matter SQ"
 body
     min-height: 100vh
     font-family: $ff-body
-    color: var(--clr-neutral)
+    color: var(--clr-neutral-1)
     text-align: center
     line-height: 1.3em
-h1, h2, h3, h4
+h1, h2
     font-weight: 600
     line-height: 1.3em
-h1
     font-size: 1.9rem
     letter-spacing: -1px
+h3
+    font-weight: 500
+    line-height: 1.6em
+h1
     line-height: 1.5em
-h2
-    font-size: 1.7rem
 p
     font-size: 0.95rem
 #hamburger
@@ -82,7 +84,7 @@ p
 #site-header
     width: 100%
     height: 80px
-    background: var(--clr-neutral)
+    background: var(--clr-neutral-1)
     display: flex
     padding: 0 var(--page-margin)
     justify-content: space-between
@@ -101,7 +103,7 @@ section
         padding: 0
 #hero
     color: white
-    background-color: var(--clr-neutral)
+    background-color: var(--clr-neutral-1)
     text-align: left
     p.sub
         margin: 24px 0 48px
@@ -113,7 +115,46 @@ section
         overflow: hidden
         img
             height: 20px
-
+#features
+    header
+        h2
+            margin-bottom: 16px
+    #qualities
+        margin: 64px 0
+        display: grid
+        gap: 4.5rem 1.875rem
+        img
+            width: 72px
+            border-radius: 8px
+        h3
+            margin-top: 24px
+        p
+            margin-top: 4px
+    #needs
+        display: grid
+        row-gap: 30px
+        h2
+            margin-bottom: 32px
+        .videos
+            video
+                border-radius: 8px
+                width: 100%
+                max-width: 480px
+                object-fit: contain
+        #scroll-navigation
+            display: flex
+            justify-content: center
+            span
+                cursor: pointer
+                width: 12px
+                height: 12px
+                background-color: var(--clr-neutral-2)
+                border-radius: 50%
+                margin: 8px
+                &.active
+                    background-color: var(--clr-neutral-1)
+        #scroll-navigation-desktop
+            display: none
 
 #sign-up
     background: var(--clr-primary)
