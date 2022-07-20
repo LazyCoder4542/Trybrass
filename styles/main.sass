@@ -207,26 +207,24 @@ section
 #support-team
     padding: 0
     div:nth-child(1)
-        background-size: cover
-        background-position-x: center
         width: 100%
+        height: fit-content
+        display: flex
+        justify-content: center
+        object-position: center center
+        height: 50vh
         img
-            width: 100%
-            height: fit-content
-            z-index: 2
-            opacity: 0
-            visibility: hidden
-            width: 100%
-            max-height: calc( 70vh - 80px )
+            object-fit: contain
+            //min-width: 100%
     div:nth-child(2)
-        padding: 3rem $page-margin 0
+        padding: 3rem $page-margin 5px
         text-align: left
         span
             color: #8f96a3
             text-transform: uppercase
-            letter-spacing: -0.5px
+            letter-spacing: -0.2px
             font-weight: 500
-            font-size: 0.75rem
+            font-size: 0.8rem
         h2
             margin: 1.25rem 0 1rem
 #resources
@@ -253,6 +251,14 @@ section
         border-radius: 50%
         margin: 8px !important
 
+@media screen and ( max-width: 300px )
+    #support-team
+        div:nth-child(1)
+            width: 100%
+            height: fit-content
+            img
+                height: 100vw
+    
 @media screen and ( min-width: calc(480px + #{$page-margin} * 2))
     #features
         #needs
