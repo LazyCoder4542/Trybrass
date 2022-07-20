@@ -119,16 +119,16 @@ p {
   padding: 80px 0 0;
 }
 
-#container section, #site-footer {
+section, #site-footer {
   padding: 0 16px 4rem;
 }
-#container section header h2, #site-footer header h2 {
+section header h2, #site-footer header h2 {
   margin-bottom: 1rem;
 }
-#container section + section, #site-footer + section {
+section + section, #site-footer + section {
   padding-top: 48px;
 }
-#container section section, #site-footer section {
+section section, #site-footer section {
   padding: 0;
 }
 
