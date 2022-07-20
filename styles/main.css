@@ -251,6 +251,38 @@ section section {
   margin-bottom: 1rem;
 }
 
+#support-team {
+  padding: 0;
+}
+#support-team div:nth-child(1) {
+  background-size: cover;
+  background-position-x: center;
+  width: 100%;
+}
+#support-team div:nth-child(1) img {
+  width: 100%;
+  height: fit-content;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  max-height: calc(70vh - 80px);
+}
+#support-team div:nth-child(2) {
+  padding: 3rem 16px 0;
+  text-align: left;
+}
+#support-team div:nth-child(2) span {
+  color: #8f96a3;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+#support-team div:nth-child(2) h2 {
+  margin: 1.25rem 0 1rem;
+}
+
 #sign-up {
   background: var(--clr-primary);
   width: 100%;
