@@ -31,9 +31,13 @@ h1, h2 {
   letter-spacing: -1px;
 }
 
-h3 {
+h3, h4 {
   font-weight: 500;
   line-height: 1.6em;
+}
+
+h4 {
+  font-size: 1.125rem;
 }
 
 h1 {
@@ -112,20 +116,19 @@ p {
 }
 
 #container {
-  position: relative;
-  top: 80px;
+  padding: 80px 0 0;
 }
 
-section {
+#container section, #site-footer {
   padding: 0 16px 4rem;
 }
-section header h2 {
+#container section header h2, #site-footer header h2 {
   margin-bottom: 1rem;
 }
-section + section {
+#container section + section, #site-footer + section {
   padding-top: 48px;
 }
-section section {
+#container section section, #site-footer section {
   padding: 0;
 }
 
@@ -278,6 +281,63 @@ section section {
 }
 #support-team div:nth-child(2) h2 {
   margin: 1.25rem 0 1rem;
+}
+
+#resources .posts {
+  display: grid;
+  gap: 2rem 1.875rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-top: 3rem;
+}
+#resources .posts article {
+  border: 1px solid #e9ebec;
+  border-radius: 0.5rem;
+  text-align: left;
+  overflow: hidden;
+}
+#resources .posts article img {
+  width: 100%;
+}
+#resources .posts article div {
+  margin: 1.5rem;
+}
+#resources .posts article div h4 {
+  margin-bottom: 0.25rem;
+}
+
+#site-footer {
+  padding-top: 6rem;
+  padding-bottom: calc(6rem + 80px);
+  background-color: var(--clr-neutral-1);
+  color: white;
+}
+#site-footer div .list li {
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid #1a1c1f;
+}
+#site-footer div .list li span {
+  display: flex;
+  justify-content: space-between;
+}
+#site-footer div .list li span img {
+  margin: 0 5px;
+}
+#site-footer div .list li p {
+  display: none;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+#site-footer div .list li.active {
+  background-color: #1a1c1f;
+  border: none;
+}
+#site-footer div .list li.active p {
+  display: block;
+}
+
+ul, li {
+  text-align: left;
+  list-style: none;
 }
 
 #sign-up {
