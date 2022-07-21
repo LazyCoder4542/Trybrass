@@ -37,8 +37,6 @@ preloadVid(
     "videos/Integrations.mp4",
     "videos/CashflowSupport.mp4"
 )
-console.log(preloadedImages)
-console.log(preloadedVideos)
 
 class pageContent {
     constructor(data) {
@@ -46,9 +44,18 @@ class pageContent {
     }
     initialize() {
         let self = this
-        console.log(this.data)
         this.videosNeeds(0)
         this.testimonials(0)
+        var dropDown = $('.dropdown')
+        dropDown.each(function() {
+            $(this).children().each(
+                function(index) {
+                    if (index == 0) {
+                        self.dropDown($(this).children())
+                    }
+                }
+            )
+        })
         $('#needs #scroll-navigation span').each(
             function (index) {
                 $(this).click(function() {
@@ -60,6 +67,13 @@ class pageContent {
             function (index) {
                 $(this).click(function() {
                     self.testimonials(index)
+                })
+            }
+        );
+        $('.dropdown .dropdowns span').each(
+            function (index) {
+                $(this).click(function() {
+                    self.dropDown($(this))
                 })
             }
         );
@@ -80,5 +94,16 @@ class pageContent {
         $('#testimonials #scroll-navigation-testimonials span').removeClass('active')
         $(`#testimonials #scroll-navigation-testimonials span:nth-child(${i + 1})`).addClass('active')
 
+    }
+    dropDown(elem) {
+        let obj = elem.parent()
+        if (obj.get(0).classList.contains('active')) {
+            obj.get(0).classList.remove('active')
+        }
+        else {
+            obj.parent().children().removeClass('active')
+            obj.get(0).classList.add('active')
+        }
+        
     }
 }

@@ -11,12 +11,12 @@ $(document).ready(function() {
     console.log('DOM ready')
     $('#hamburger').click(function() {
         $('#hamburger').toggleClass('open')
+        $('#menu ul').toggle()
     })
 });
 var obj = $('#support-team div:first')
 var obj2 = obj.siblings()
 $(window).scroll(function() {
-    var objB = obj.get(0).getBoundingClientRect();
     var objB2 = obj2.get(0).getBoundingClientRect();
     if (objB2.top <= 80+ obj.innerHeight() && objB2.bottom >= 80+ obj.innerHeight()) {
         obj.css({'position': 'fixed', 'top': '80px', 'left': '0'})

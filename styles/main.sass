@@ -21,6 +21,7 @@ body
     color: var(--clr-neutral-1)
     text-align: center
     line-height: 1.3em
+    overflow-x: hidden
 h1, h2
     font-weight: 600
     line-height: 1.3em
@@ -97,6 +98,26 @@ p
     align-items: center
     position: fixed
     z-index: 1
+    #menu
+        .dropdown
+            display: none
+            position: fixed
+            width: 100%
+            left: 0
+            top: 80px
+            color: white
+            height: 100vh
+            background: var(--clr-neutral-1)
+            padding: 0 $page-margin
+            font-size: 15px
+            h4, p
+                font-weight: 400
+                font-size: 15px
+            .dropdowns
+                margin: 20px 0
+                .drop
+                    p
+                        margin-top: 1.5rem
 #container
     padding: 80px 0 0
 section, #site-footer
@@ -112,6 +133,17 @@ section, #site-footer
     color: white
     background-color: var(--clr-neutral-1)
     text-align: left
+    .intro
+        padding: 1rem 0
+        img
+            width: 100%
+            opacity: 0.85
+        .img-action
+            display: flex
+            transform: translate(20px, -150%)
+            img
+                width: 32px
+                margin-right: 0.5rem
     p.sub
         margin: 24px 0 48px
     .sponsors
@@ -213,10 +245,10 @@ section, #site-footer
         display: flex
         justify-content: center
         object-position: center center
-        height: 50vh
+        max-height: 50vh
         img
             object-fit: contain
-            //min-width: 100%
+            width: 100%
     div:nth-child(2)
         padding: 3rem $page-margin 5px
         text-align: left
@@ -251,33 +283,93 @@ section, #site-footer
         bottom: calc( 6rem + 80px)
     background-color: var(--clr-neutral-1)
     color: white
-    div
+    .faq
+        display: flex
+        flex-direction: column
         .list
+            margin-top: 3rem
             li
                 padding: 2.5rem 1rem
                 border-bottom: 1px solid #1a1c1f
-                span
-                    display: flex
-                    justify-content: space-between
-                    img
-                        margin: 0 5px
                 p
-                    display: none
+                    font-weight: 300
                     font-size: 1rem
                     margin-top: 1rem
                 &.active
                     background-color: #1a1c1f
                     border: none
-                    p
-                        display: block
-
+    .get-started
+        margin: 4rem 0
+        button
+            margin-top: 3rem
+            padding: 0.875rem 2rem
+            border-radius: 5px
+            background-color: var(--clr-primary)
+            color: inherit
+            font-family: inherit
+            font-weight: 500
+            font-size: 14px
+    .links
+        margin: 54px 0 152px
+        .dropdown
+            .dropdowns
+                font-weight: 400 !important
+                margin-bottom: 2rem
+                span
+                    color: #50555e
+                ul
+                    li
+                        margin-top: 1.25rem
+                        & + li
+                            margin-bottom: 1.25rem
+    .platforms
+        text-align: left
+        .logo-section
+            //display: flex
+            height: 100%
+            align-items: flex-end
+            img
+                margin-right: 12px
+            p
+                display: inline
+                font-size: 15px
+        h4
+            margin: 1rem 0
+            font-size: 15px
+        .os-logo
+            img + img
+                margin-left: 0.75rem
+    .disclaimer
+        margin-top: 40px
+        p
+            font-size: 15px
+            text-align: left
+    
+.dropdown
+    li
+        cursor: pointer
+        span
+            display: flex
+            justify-content: space-between
+            img
+                margin: 0 5px
+                transition: transform 500ms
+        .drop
+            display: none
+        &.active
+            span
+                img
+                    transform-origin: center
+                    transform: rotateX(180deg) rotateY(360deg)
+            .drop
+                display: block
 ul,li
     text-align: left
     list-style: none
 #sign-up
     background: var(--clr-primary)
     width: 100%
-    height:80px
+    height: 80px
     justify-content: center 
     display: flex
     align-items: center
@@ -303,7 +395,16 @@ ul,li
             width: 100%
             height: fit-content
             img
+                object-fit: contain
                 height: 100vw
+@media screen and ( min-width: 576px )
+    #support-team
+        div:nth-child(1)
+            width: 100%
+            height: fit-content
+            img
+                width: 100%
+                height: auto
     
 @media screen and ( min-width: calc(480px + #{$page-margin} * 2))
     #features

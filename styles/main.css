@@ -22,6 +22,7 @@ body {
   color: var(--clr-neutral-1);
   text-align: center;
   line-height: 1.3em;
+  overflow-x: hidden;
 }
 
 h1, h2 {
@@ -114,6 +115,28 @@ p {
   position: fixed;
   z-index: 1;
 }
+#site-header #menu .dropdown {
+  display: none;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 80px;
+  color: white;
+  height: 100vh;
+  background: var(--clr-neutral-1);
+  padding: 0 16px;
+  font-size: 15px;
+}
+#site-header #menu .dropdown h4, #site-header #menu .dropdown p {
+  font-weight: 400;
+  font-size: 15px;
+}
+#site-header #menu .dropdown .dropdowns {
+  margin: 20px 0;
+}
+#site-header #menu .dropdown .dropdowns .drop p {
+  margin-top: 1.5rem;
+}
 
 #container {
   padding: 80px 0 0;
@@ -136,6 +159,21 @@ section section, #site-footer section {
   color: white;
   background-color: var(--clr-neutral-1);
   text-align: left;
+}
+#hero .intro {
+  padding: 1rem 0;
+}
+#hero .intro img {
+  width: 100%;
+  opacity: 0.85;
+}
+#hero .intro .img-action {
+  display: flex;
+  transform: translate(20px, -150%);
+}
+#hero .intro .img-action img {
+  width: 32px;
+  margin-right: 0.5rem;
 }
 #hero p.sub {
   margin: 24px 0 48px;
@@ -264,10 +302,11 @@ section section, #site-footer section {
   display: flex;
   justify-content: center;
   object-position: center center;
-  height: 50vh;
+  max-height: 50vh;
 }
 #support-team div:nth-child(1) img {
   object-fit: contain;
+  width: 100%;
 }
 #support-team div:nth-child(2) {
   padding: 3rem 16px 5px;
@@ -312,27 +351,103 @@ section section, #site-footer section {
   background-color: var(--clr-neutral-1);
   color: white;
 }
-#site-footer div .list li {
+#site-footer .faq {
+  display: flex;
+  flex-direction: column;
+}
+#site-footer .faq .list {
+  margin-top: 3rem;
+}
+#site-footer .faq .list li {
   padding: 2.5rem 1rem;
   border-bottom: 1px solid #1a1c1f;
 }
-#site-footer div .list li span {
-  display: flex;
-  justify-content: space-between;
-}
-#site-footer div .list li span img {
-  margin: 0 5px;
-}
-#site-footer div .list li p {
-  display: none;
+#site-footer .faq .list li p {
+  font-weight: 300;
   font-size: 1rem;
   margin-top: 1rem;
 }
-#site-footer div .list li.active {
+#site-footer .faq .list li.active {
   background-color: #1a1c1f;
   border: none;
 }
-#site-footer div .list li.active p {
+#site-footer .get-started {
+  margin: 4rem 0;
+}
+#site-footer .get-started button {
+  margin-top: 3rem;
+  padding: 0.875rem 2rem;
+  border-radius: 5px;
+  background-color: var(--clr-primary);
+  color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+}
+#site-footer .links {
+  margin: 54px 0 152px;
+}
+#site-footer .links .dropdown .dropdowns {
+  font-weight: 400 !important;
+  margin-bottom: 2rem;
+}
+#site-footer .links .dropdown .dropdowns span {
+  color: #50555e;
+}
+#site-footer .links .dropdown .dropdowns ul li {
+  margin-top: 1.25rem;
+}
+#site-footer .links .dropdown .dropdowns ul li + li {
+  margin-bottom: 1.25rem;
+}
+#site-footer .platforms {
+  text-align: left;
+}
+#site-footer .platforms .logo-section {
+  height: 100%;
+  align-items: flex-end;
+}
+#site-footer .platforms .logo-section img {
+  margin-right: 12px;
+}
+#site-footer .platforms .logo-section p {
+  display: inline;
+  font-size: 15px;
+}
+#site-footer .platforms h4 {
+  margin: 1rem 0;
+  font-size: 15px;
+}
+#site-footer .platforms .os-logo img + img {
+  margin-left: 0.75rem;
+}
+#site-footer .disclaimer {
+  margin-top: 40px;
+}
+#site-footer .disclaimer p {
+  font-size: 15px;
+  text-align: left;
+}
+
+.dropdown li {
+  cursor: pointer;
+}
+.dropdown li span {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown li span img {
+  margin: 0 5px;
+  transition: transform 500ms;
+}
+.dropdown li .drop {
+  display: none;
+}
+.dropdown li.active span img {
+  transform-origin: center;
+  transform: rotateX(180deg) rotateY(360deg);
+}
+.dropdown li.active .drop {
   display: block;
 }
 
@@ -372,7 +487,18 @@ ul, li {
     height: fit-content;
   }
   #support-team div:nth-child(1) img {
+    object-fit: contain;
     height: 100vw;
+  }
+}
+@media screen and (min-width: 576px) {
+  #support-team div:nth-child(1) {
+    width: 100%;
+    height: fit-content;
+  }
+  #support-team div:nth-child(1) img {
+    width: 100%;
+    height: auto;
   }
 }
 @media screen and (min-width: calc(480px + 16px * 2)) {

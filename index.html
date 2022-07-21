@@ -24,17 +24,76 @@
         <div class="logo">
             <img src="images/logo.svg" alt="">
         </div>
-        <div class="menu">
+        <div id="menu">
             <nav id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </nav>
+            <ul class="dropdown">
+                <li class="dropdowns active">
+                    <span>
+                        <h4>Industry</h4>
+                        <img src="images/dropdown-white.svg" alt>
+                    </span>
+                    <div class="drop">
+                        <p>Retail businesses</p>
+                        <p>Internet companies</p>
+                    </div>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <h4>Customers</h4>
+                    </span>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <h4>Capital</h4>
+                    </span>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <h4>Company</h4>
+                        <img src="images/dropdown-white.svg" alt>
+                    </span>
+                    <div class="drop">
+                        <p>About us</p>
+                        <p>Why Brass?</p>
+                        <p>Careers</p>
+                        <p>Press resources</p>
+                    </div>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <h4>Resources</h4>
+                        <img src="images/dropdown-white.svg" alt>
+                    </span>
+                    <div class="drop">
+                        <p>Blog</p>
+                        <p>Guides</p>
+                        <p>Help</p>
+                    </div>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <h4>Login</h4>
+                    </span>
+                </li>
+            </ul>
         </div>
     </header>
     <div id="container">
         <section id="hero">
-            <div class="intro"></div>
+            <div class="intro">
+                <img src="images/hero.webp" alt>
+                <div class="img-action">
+                    <img src="images/play.svg" alt>
+                    <span>
+                        <h4>Play this video</h4>
+                        <p>To see why we built brass</p>
+                    </span>
+                </div>
+            </div>
             <div class="tag-line">
                 <h1 class="main">Banking that works for your business</h1>
                 <p class="sub">Do more with a business account that comes with top-end financial tools and integrations to help grow your business.</p>
@@ -211,49 +270,154 @@
         </section>
     </div>
     <footer id="site-footer">
-        <div>
+        <div class="faq">
             <header>
                 <h2>Some of the things you may want to know</h2>
                 <p>We answered questions so you don’t have to ask them.</p>
             </header>
-            <ul class="list">
-                <li>
+            <ul class="list dropdown">
+                <li class="dropdowns">
                     <span>
                         <h4>Who can sign up on Brass?</h4>
                         <img src="images/dropdown-white.svg" alt>
                     </span>
-                    <p class="sub-para">
+                    <p class="sub-para drop">
                         We currently only serve registered businesses in Nigeria. We support sole traders, NGOs, partnerships and limited liability companies.</br>However, If your business is not yet registered, Brass can help you get your desired business registered on time with our partners.
                     </p>
                 </li>
-                <li>
+                <li class="dropdowns">
                     <span>
                         <h4>How much do I pay to sign up at Brass?</h4>
                         <img src="images/dropdown-white.svg" alt>
                     </span>
-                    <p class="sub-para">
+                    <p class="sub-para drop">
                         You do not pay for signing up for an account at Brass
                     </p>
                 </li>
-                <li>
+                <li class="dropdowns">
                     <span>
                         <h4>What do I need to open an account?</h4>
                         <img src="images/dropdown-white.svg" alt>
                     </span>
-                    <p class="sub-para">
+                    <p class="sub-para drop">
                         You will need government-issued IDs (Including BVN) and your company's incorporation documents.
                     </p>
                 </li>
-                <li>
+                <li class="dropdowns">
                     <span>
                         <h4>How do you ensure safekeeping of my data and money?</h4>
                         <img src="images/dropdown-white.svg" alt>
                     </span>
-                    <p class="sub-para">
+                    <p class="sub-para drop">
                         We have introduced Two factor Authentication(2FA) for an extra level of security. This authentication is done using digital OTP apps like Google authenticator and Authy instead of hackable channels such as the SMS.
                     </p>
                 </li>
             </ul>
+        </div>
+        <div class="get-started">
+            <header>
+                <h2>Get started for free in 10 minutes</h2>
+                <p>Get all best financial products for your business growth for free.</p>
+                <p>Open the last current account you will ever need for your business</p>
+            </header>
+            <button>Get started in minutes</button>
+        </div>
+        <div class="links">
+            <ul class="dropdown">
+                <li class="dropdowns">
+                    <span>
+                        <p>Industry</p>
+                        <img src="images/dropdown.svg" alt>
+                    </span>
+                    <ul class="anchors drop">
+                        <li>Retail businesses</li>
+                        <li>Internet companies</li>
+                    </ul>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <p>Product</p>
+                        <img src="images/dropdown.svg" alt>
+                    </span>
+                    <ul class="anchors drop">
+                        <li>Brass Capital</li>
+                    </ul>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <p>About</p>
+                        <img src="images/dropdown.svg" alt>
+                    </span>
+                    <ul class="anchors drop">
+                        <li>Customers</li>
+                        <li>Company</li>
+                        <li>Why Brass</li>
+                        <li>Press resources</li>
+                        <li>Careers</li>
+                    </ul>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <p>Support</p>
+                        <img src="images/dropdown.svg" alt>
+                    </span>
+                    <ul class="anchors drop">
+                        <li>Blog</li>
+                        <li>Guides</li>
+                        <li>Help</li>
+                    </ul>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <p>Legal</p>
+                        <img src="images/dropdown.svg" alt>
+                    </span>
+                    <ul class="anchors drop">
+                        <li>Terms of service</li>
+                        <li>Privacy policy</li>
+                        <li>Capital TOS</li>
+                    </ul>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <p>Follow</p>
+                        <img src="images/dropdown.svg" alt>
+                    </span>
+                    <ul class="anchors drop">
+                        <li>Twitter</li>
+                        <li>Linkedin</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </li>
+                <li class="dropdowns">
+                    <span>
+                        <p>Contact</p>
+                        <img src="images/dropdown.svg" alt>
+                    </span>
+                    <ul class="anchors drop">
+                        <li>01-700-2000</li>
+                        <li>sales@trybrass.com</li>
+                        <li>help@trybrass.com</li>
+                        <li>business@trybrass.com</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="platforms">
+            <div class="logo-section">
+                <img src="images/logo-white.svg" alt="logo">
+                <p>Big starts small.</p>
+            </div>
+            <h4>Available on web and also on</h4>
+            <div class="os-logo">
+                <img src="images/android.svg" alt>
+                <img src="images/ios.svg" alt>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>Banking services backed by Bancorp MFB & FCMB and regulated by the Central Bank of Nigeria.</p>
+            <p>Brass Technology Nigeria Limited, DBA: Brass is a Brass Technologies, Inc company.</p>
         </div>
     </footer>
     <div id="sign-up">
