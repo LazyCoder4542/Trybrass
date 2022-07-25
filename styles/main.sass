@@ -96,7 +96,7 @@ p
     display: flex
     padding: 0 var(--page-margin)
     justify-content: space-between
-    align-items: center
+    place-items: center
     column-gap: 3em
     position: fixed
     z-index: 1
@@ -205,8 +205,6 @@ section, #site-footer
         #scroll-navigation-desktop
             display: none
 #testimonials
-    h3, h4, p
-        color: white
     width: 100%
     padding:
         left: 0
@@ -214,15 +212,21 @@ section, #site-footer
         bottom: 0
     header
         padding: 0 var(--page-margin)
+        p
+            max-width: 595px
+            margin: auto
     figure
+        h3, h4, p
+            color: white
         display: grid
         margin: 3rem auto 0
+        background-color: var(--clr-neutral-1)
         #testimonial-image
             width: 100%
         figcaption
             * + *
                 margin-top: 2rem
-            background-color: var(--clr-neutral-1)
+            //background-color: var(--clr-neutral-1)
             color: white
             padding: 48px var(--page-margin)
             #testimonial-name
@@ -278,6 +282,9 @@ section, #site-footer
         h2
             margin: 1.25rem 0 1rem
 #resources
+    header
+        max-width: 585px
+        margin: auto
     .posts
         display: grid
         gap: 2rem 1.875rem
@@ -289,7 +296,10 @@ section, #site-footer
             text-align: left
             overflow: hidden
             img
-                width: 100%
+                max-width: 100%
+                min-height: 240px
+                object-fit: cover
+                object-position: center center
             div
                 margin: 1.5rem
                 h4
@@ -524,7 +534,8 @@ ul,li
         grid-template-columns: 1fr 1fr
         padding-bottom: 100px
         div:nth-child(1)
-            height: calc(100vh - var(--page-margin))
+            position: static !important
+            height: calc(100vh - 80px)
             max-height: none
             width: 100%
             object-fit: cover
@@ -535,9 +546,8 @@ ul,li
         div:nth-child(2)
             height: fit-content
             display: table
-            padding:
-                top: 0
-                bottom: 0
+            padding: 0 2rem
+            margin-top: 0 !important
             position: relative
             top: 50%
             transform: translateY(-50%)
@@ -596,6 +606,9 @@ ul,li
                             img
                                 display: none
     #features
+        padding:
+            top: 6rem
+            bottom: 6rem
         #qualities
             grid-template-columns: 1fr 1fr 1fr
             gap: 4.5rem 1.875rem
@@ -613,6 +626,82 @@ ul,li
                     position: relative
                     top: 50%
                     transform: translateY(-50%)
+                h3
+                    margin: 0
                 p
                     font-size: 15px
                     color: #060809
+        #needs
+            text-align: left
+            display: grid
+            grid-template-columns: 1fr 1fr
+            place-items: center
+            h2
+                font-size: 2.8125rem
+                max-width: 70%
+                margin-right: auto
+                grid-area: 1/1/2/3
+            #scroll-navigation, #current-video
+                display: none
+            #scroll-navigation-desktop
+                display: table
+                grid-area: 2/1/3/2
+                span
+                    box-sizing: padding-box
+                    display: table
+                    width: fit-content
+                    padding: 1.5rem 1.25rem
+                    border-left: 4px solid #f9fafa
+                    p, h3
+                        color: #8f96a3
+                    &.active
+                        border-left-color: var(--clr-primary)
+                        p, h3
+                            color: inherit
+                
+    #testimonials
+        figure
+            figcaption
+                max-width: 500px
+                margin: auto
+                padding:
+                    left: 1rem
+                    right: 1rem
+    #support-team
+        padding: 3rem 0 100px
+    #resources
+        padding:
+            top: 100px
+            bottom: 100px
+        .posts
+            grid-template-columns: 1fr 1fr 1fr
+    #site-footer
+        padding:
+            top: 200px
+            bottom: 120px
+        .faq
+            padding-bottom: 72px
+            header
+                text-align: left
+                h2
+                    font-size: 2.8125rem
+        .get-started
+            margin: 100px 0
+        .links
+            margin: 54px 0 0
+            ul:nth-child(1)
+                display: grid
+                grid-template-rows: 1fr
+                grid-auto-flow: column
+                font-size: 15px
+                p
+                    font-size: 15px
+                .dropdowns
+                    display: table
+                    width: fit-content
+                    & + .dropdowns
+                        padding-left: 1rem
+        .platforms
+            margin-top: 172px
+        .disclaimer
+            margin-top: 4rem

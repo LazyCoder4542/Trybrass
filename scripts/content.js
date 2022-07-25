@@ -63,6 +63,13 @@ class pageContent {
                 })
             }
         );
+        $('#needs #scroll-navigation-desktop span').each(
+            function (index) {
+                $(this).click(function() {
+                    self.videosNeeds(index)
+                })
+            }
+        );
         $('#testimonials #scroll-navigation-testimonials span').each(
             function (index) {
                 $(this).click(function() {
@@ -82,8 +89,8 @@ class pageContent {
         let data = this.data["video-slide"][i]
         $('#needs .videos video')[0].src = data
         $('#needs #current-video')[0].innerHTML = $(`#needs #scroll-navigation-desktop span:nth-child(${i + 1})`)[0].innerHTML
-        $('#needs #scroll-navigation span').removeClass('active')
-        $(`#needs #scroll-navigation span:nth-child(${i + 1})`).addClass('active')
+        $('#needs #scroll-navigation span, #needs #scroll-navigation-desktop span').removeClass('active')
+        $(`#needs #scroll-navigation span:nth-child(${i + 1}), #needs #scroll-navigation-desktop span:nth-child(${i + 1})`).addClass('active')
     }
     testimonials(i) {
         let data = this.data["testimonials"][i]

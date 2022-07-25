@@ -113,7 +113,7 @@ p {
   display: flex;
   padding: 0 var(--page-margin);
   justify-content: space-between;
-  align-items: center;
+  place-items: center;
   column-gap: 3em;
   position: fixed;
   z-index: 1;
@@ -259,21 +259,25 @@ section section, #site-footer section {
   padding-right: 0;
   padding-bottom: 0;
 }
-#testimonials h3, #testimonials h4, #testimonials p {
-  color: white;
-}
 #testimonials header {
   padding: 0 var(--page-margin);
+}
+#testimonials header p {
+  max-width: 595px;
+  margin: auto;
 }
 #testimonials figure {
   display: grid;
   margin: 3rem auto 0;
+  background-color: var(--clr-neutral-1);
+}
+#testimonials figure h3, #testimonials figure h4, #testimonials figure p {
+  color: white;
 }
 #testimonials figure #testimonial-image {
   width: 100%;
 }
 #testimonials figure figcaption {
-  background-color: var(--clr-neutral-1);
   color: white;
   padding: 48px var(--page-margin);
 }
@@ -346,6 +350,10 @@ section section, #site-footer section {
   margin: 1.25rem 0 1rem;
 }
 
+#resources header {
+  max-width: 585px;
+  margin: auto;
+}
 #resources .posts {
   display: grid;
   gap: 2rem 1.875rem;
@@ -359,7 +367,10 @@ section section, #site-footer section {
   overflow: hidden;
 }
 #resources .posts article img {
-  width: 100%;
+  max-width: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  object-position: center center;
 }
 #resources .posts article div {
   margin: 1.5rem;
@@ -633,7 +644,8 @@ ul, li {
     padding-bottom: 100px;
   }
   #support-team div:nth-child(1) {
-    height: calc(100vh - var(--page-margin));
+    position: static !important;
+    height: calc(100vh - 80px);
     max-height: none;
     width: 100%;
     object-fit: cover;
@@ -646,8 +658,8 @@ ul, li {
   #support-team div:nth-child(2) {
     height: fit-content;
     display: table;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 2rem;
+    margin-top: 0 !important;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -715,6 +727,10 @@ ul, li {
   #site-header #menu .menu-dropdown .dropdown .dropdowns span img {
     display: none;
   }
+  #features {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
   #features #qualities {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4.5rem 1.875rem;
@@ -734,8 +750,103 @@ ul, li {
     top: 50%;
     transform: translateY(-50%);
   }
+  #features #qualities div h3 {
+    margin: 0;
+  }
   #features #qualities div p {
     font-size: 15px;
     color: #060809;
+  }
+  #features #needs {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+  #features #needs h2 {
+    font-size: 2.8125rem;
+    max-width: 70%;
+    margin-right: auto;
+    grid-area: 1/1/2/3;
+  }
+  #features #needs #scroll-navigation, #features #needs #current-video {
+    display: none;
+  }
+  #features #needs #scroll-navigation-desktop {
+    display: table;
+    grid-area: 2/1/3/2;
+  }
+  #features #needs #scroll-navigation-desktop span {
+    box-sizing: padding-box;
+    display: table;
+    width: fit-content;
+    padding: 1.5rem 1.25rem;
+    border-left: 4px solid #f9fafa;
+  }
+  #features #needs #scroll-navigation-desktop span p, #features #needs #scroll-navigation-desktop span h3 {
+    color: #8f96a3;
+  }
+  #features #needs #scroll-navigation-desktop span.active {
+    border-left-color: var(--clr-primary);
+  }
+  #features #needs #scroll-navigation-desktop span.active p, #features #needs #scroll-navigation-desktop span.active h3 {
+    color: inherit;
+  }
+  #testimonials figure figcaption {
+    max-width: 500px;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #support-team {
+    padding: 3rem 0 100px;
+  }
+  #resources {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  #resources .posts {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #site-footer {
+    padding-top: 200px;
+    padding-bottom: 120px;
+  }
+  #site-footer .faq {
+    padding-bottom: 72px;
+  }
+  #site-footer .faq header {
+    text-align: left;
+  }
+  #site-footer .faq header h2 {
+    font-size: 2.8125rem;
+  }
+  #site-footer .get-started {
+    margin: 100px 0;
+  }
+  #site-footer .links {
+    margin: 54px 0 0;
+  }
+  #site-footer .links ul:nth-child(1) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    font-size: 15px;
+  }
+  #site-footer .links ul:nth-child(1) p {
+    font-size: 15px;
+  }
+  #site-footer .links ul:nth-child(1) .dropdowns {
+    display: table;
+    width: fit-content;
+  }
+  #site-footer .links ul:nth-child(1) .dropdowns + .dropdowns {
+    padding-left: 1rem;
+  }
+  #site-footer .platforms {
+    margin-top: 172px;
+  }
+  #site-footer .disclaimer {
+    margin-top: 4rem;
   }
 }
