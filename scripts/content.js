@@ -97,13 +97,15 @@ class pageContent {
     }
     dropDown(elem) {
         let obj = elem.parent()
-        if (obj.get(0).classList.contains('active')) {
-            obj.get(0).classList.remove('active')
-        }
-        else {
-            obj.parent().children().removeClass('active')
-            obj.get(0).classList.add('active')
-        }
+        try {
+            if (obj.get(0).classList.contains('active')) {
+                obj.get(0).classList.remove('active')
+            }
+            else {
+                obj.parent().children().removeClass('active')
+                obj.get(0).classList.add('active')
+            }
+        } catch {}
         
     }
 }

@@ -1,10 +1,10 @@
 $ff-body: "Matter SQ"
-$page-margin: 16px
+//$page-margin: 16px
 :root
     --clr-primary: #0bce5a
     --clr-neutral-1: #060809
     --clr-neutral-2: #d3d3d3
-    //--page-margin: 16px
+    --page-margin: 16px
 *
     
     margin: 0
@@ -18,7 +18,6 @@ body
     scroll-behavior: smooth
     min-height: 100vh
     font-family: $ff-body
-    color: var(--clr-neutral-1)
     text-align: center
     line-height: 1.3em
     overflow-x: hidden
@@ -30,12 +29,14 @@ h1, h2
 h3, h4
     font-weight: 500
     line-height: 1.6em
+    color: var(--clr-neutral-1)
 h4
     font-size: 1.125rem
 h1
     line-height: 1.5em
 p
     font-size: 0.95rem
+    color: var(--clr-neutral-1)
 #hamburger
     width: 20px
     height: 15px
@@ -93,35 +94,39 @@ p
     height: 80px
     background: var(--clr-neutral-1)
     display: flex
-    padding: 0 $page-margin
+    padding: 0 var(--page-margin)
     justify-content: space-between
     align-items: center
+    column-gap: 3em
     position: fixed
     z-index: 1
     #menu
-        .dropdown
+        .menu-dropdown
             display: none
             position: fixed
             width: 100%
             left: 0
             top: 80px
-            color: white
             height: 100vh
             background: var(--clr-neutral-1)
-            padding: 0 $page-margin
-            font-size: 15px
-            h4, p
-                font-weight: 400
+            padding: 0 var(--page-margin)
+            button
+                display: none
+            .dropdown
+                color: white
                 font-size: 15px
-            .dropdowns
-                margin: 20px 0
-                .drop
-                    p
-                        margin-top: 1.5rem
+                h4, p
+                    font-weight: 400
+                    font-size: 15px
+                .dropdowns
+                    margin: 20px 0
+                    .drop
+                        p
+                            margin-top: 1.5rem
 #container
     padding: 80px 0 0
 section, #site-footer
-    padding: 0 $page-margin 4rem
+    padding: 0 var(--page-margin) 4rem
     header
         h2
             margin-bottom: 1rem
@@ -130,7 +135,8 @@ section, #site-footer
     section
         padding: 0
 #hero
-    color: white
+    h3, h4, p
+        color: white
     background-color: var(--clr-neutral-1)
     text-align: left
     .intro
@@ -144,8 +150,17 @@ section, #site-footer
             img
                 width: 32px
                 margin-right: 0.5rem
-    p.sub
-        margin: 24px 0 48px
+    .tag-line, .sponsors
+        max-width: 523px
+        margin: auto
+    .tag-line
+        h1
+            color: white
+        button
+            display: none
+            outline: none
+        p.sub
+            margin: 24px 0 48px
     .sponsors
         margin-top: 88px
         display: flex
@@ -174,7 +189,7 @@ section, #site-footer
         .videos
             video
                 background-color: #ebedee
-                min-height: calc((100vw - 2*($page-margin)) * (369.733)/(343.466))
+                min-height: calc((100vw - 2*(var(--page-margin))) * (369.733)/(343.466))
                 border-radius: 8px
                 width: 100%
                 max-width: 480px
@@ -190,13 +205,15 @@ section, #site-footer
         #scroll-navigation-desktop
             display: none
 #testimonials
+    h3, h4, p
+        color: white
     width: 100%
     padding:
         left: 0
         right: 0
         bottom: 0
     header
-        padding: 0 $page-margin
+        padding: 0 var(--page-margin)
     figure
         display: grid
         margin: 3rem auto 0
@@ -207,7 +224,7 @@ section, #site-footer
                 margin-top: 2rem
             background-color: var(--clr-neutral-1)
             color: white
-            padding: 48px $page-margin
+            padding: 48px var(--page-margin)
             #testimonial-name
                 color: #656b76
                 font-size: 0.9375rem
@@ -241,7 +258,7 @@ section, #site-footer
     padding: 0
     div:nth-child(1)
         width: 100%
-        height: fit-content
+        //height: fit-content
         display: flex
         justify-content: center
         object-position: center center
@@ -250,7 +267,7 @@ section, #site-footer
             object-fit: contain
             width: 100%
     div:nth-child(2)
-        padding: 3rem $page-margin 5px
+        padding: 3rem var(--page-margin) 5px
         text-align: left
         span
             color: #8f96a3
@@ -283,6 +300,8 @@ section, #site-footer
         bottom: calc( 6rem + 80px)
     background-color: var(--clr-neutral-1)
     color: white
+    h3, h4, p
+        color: white
     .faq
         display: flex
         flex-direction: column
@@ -311,17 +330,21 @@ section, #site-footer
             font-size: 14px
     .links
         margin: 54px 0 152px
-        .dropdown
-            .dropdowns
-                font-weight: 400 !important
-                margin-bottom: 2rem
-                span
+        .dropdowns
+            font-weight: 400
+            margin-bottom: 2rem
+            span
+                p
                     color: #50555e
-                ul
-                    li
-                        margin-top: 1.25rem
-                        & + li
-                            margin-bottom: 1.25rem
+            ul
+                li
+                    margin-top: 1.25rem
+                    & + li
+                        margin-bottom: 1.25rem
+        .temp
+            span
+                img
+                    display: none
     .platforms
         text-align: left
         .logo-section
@@ -346,6 +369,8 @@ section, #site-footer
             text-align: left
     
 .dropdown
+    h3, h4, p
+        color: white
     li
         cursor: pointer
         span
@@ -366,6 +391,15 @@ section, #site-footer
 ul,li
     text-align: left
     list-style: none
+    color: inherit
+.open-account
+    padding: 0.875rem 2rem
+    border-radius: 5px
+    background-color: var(--clr-primary)
+    color: white
+    font-family: inherit
+    font-weight: 500
+    font-size: 14px
 #sign-up
     background: var(--clr-primary)
     width: 100%
@@ -406,10 +440,179 @@ ul,li
                 width: 100%
                 height: auto
     
-@media screen and ( min-width: calc(480px + #{$page-margin} * 2))
+@media screen and ( min-width: calc(480px + #{var(--page-margin)} * 2))
     #features
         #needs
             .videos
                 video
                     min-height: calc(480px * (369.733)/(343.466))
     
+@media screen and ( min-width: 425px )
+    #hero
+        .sponsors
+            img
+                height: 2rem
+
+
+
+
+@media screen and ( min-width: 576px )
+    #testimonials
+        figure
+            display: flex
+            flex-direction: row-reverse
+            #testimonial-image
+                width: 50%
+                object-fit: cover
+            figcaption
+                padding:
+                    top: 7rem
+                    bottom: 7rem
+                #testimony
+                    font-weight: 400 !important
+                    letter-spacing: -1.21px
+                    line-height: 41px
+                    font-size: 1.875rem
+
+
+@media screen and ( min-width: 768px )
+    :root
+        --page-margin: 32px
+    h1
+        font-size: 2.8125rem
+    p
+        font-size: 1.125rem
+        font-weight: 300
+    #hero
+        padding-top: 4rem
+        padding-bottom: 7.5rem
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 5%
+        .intro
+            grid-row: 1/3
+            position: relative
+            top: 50%
+            transform: translateY(-40%)
+            img
+                border-radius: 8px
+        .tag-line
+            grid-column: 1/2
+            grid-row: 1/2
+            button
+                display: block
+        .sponsors
+            flex-wrap: wrap
+            justify-content: flex-start
+            gap: 2rem
+    #features
+        #qualities
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 4.5rem 1.875rem
+        #needs
+            .videos
+                video
+                    min-height: 510px
+    #testimonials
+        padding-top: 200px
+    #integrations
+        header
+            text-align: left
+    #support-team
+        display: grid
+        grid-template-columns: 1fr 1fr
+        padding-bottom: 100px
+        div:nth-child(1)
+            height: calc(100vh - var(--page-margin))
+            max-height: none
+            width: 100%
+            object-fit: cover
+            overflow: hidden
+            img
+                height: 100%
+                object-fit: cover
+        div:nth-child(2)
+            height: fit-content
+            display: table
+            padding:
+                top: 0
+                bottom: 0
+            position: relative
+            top: 50%
+            transform: translateY(-50%)
+            h2
+                font-size: 2.8125rem
+            p
+                line-height: 26px
+    #resources
+        .posts
+            display: grid
+            gap: 2rem 1.875rem
+            grid-template-columns: 1fr 1fr
+    #site-footer
+        .faq
+            display: grid
+            grid-template-columns: 5fr 7fr
+            column-gap: 10%
+            .list
+                margin-top: 0
+        .links
+            font-weight: 300px
+            .dropdowns
+                font-weight: 300
+    #sign-up
+        display: none
+
+@media screen and ( min-width: 1024px )
+    :root
+        --page-margin: 100px
+    h1
+        font-size: 60px
+        line-height: 4rem
+    #site-header
+        #menu
+            #hamburger
+                display: none
+            .menu-dropdown
+                display: block
+                padding: 0
+                position: static
+                width: 100%
+                min-width: 70vw
+                height: auto
+                display: flex
+                column-gap: 1em
+                justify-content: space-between
+                button
+                    display: inline
+                .dropdown
+                    justify-self: flex-end
+                    display: inline
+                    display: flex
+                    column-gap: 20px
+                    .dropdowns
+                        span
+                            img
+                                display: none
+    #features
+        #qualities
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 4.5rem 1.875rem
+            margin:
+                top: 100px
+                bottom: 100px
+            div
+                display: grid
+                grid-template-columns: auto auto
+                column-gap: 1rem
+                text-align: left
+                img
+                    grid-row: 1/3
+                    grid-column: 1/2
+                    position: relative
+                    top: 50%
+                    transform: translateY(-50%)
+                p
+                    font-size: 15px
+                    color: #060809
