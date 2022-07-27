@@ -10,6 +10,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--clr-primary);
+}
 *::selection {
   background-color: var(--clr-primary);
   color: white;
@@ -28,7 +33,7 @@ body {
 h1, h2 {
   font-weight: 600;
   line-height: 1.3em;
-  font-size: 1.9rem;
+  font-size: 1.875rem;
   letter-spacing: -1px;
 }
 
@@ -145,6 +150,9 @@ p {
 #site-header #menu .menu-dropdown .dropdown .dropdowns .drop p {
   margin-top: 1.5rem;
 }
+#site-header #menu .menu-dropdown .dropdown .dropdowns .drop p:nth-child(2) {
+  display: none;
+}
 
 #container {
   padding: 80px 0 0;
@@ -171,7 +179,7 @@ section section, #site-footer section {
   color: white;
 }
 #hero .intro {
-  padding: 1rem 0;
+  padding: 1rem 0 0;
 }
 #hero .intro img {
   width: 100%;
@@ -194,7 +202,6 @@ section section, #site-footer section {
 }
 #hero .tag-line button {
   display: none;
-  outline: none;
 }
 #hero .tag-line p.sub {
   margin: 24px 0 48px;
@@ -298,7 +305,7 @@ section section, #site-footer section {
   height: 3rem;
 }
 
-#integrations header p {
+#integrations header {
   text-align: left;
 }
 #integrations #media-cards {
@@ -319,6 +326,9 @@ section section, #site-footer section {
 }
 #integrations #media-cards .media-card h3 {
   margin-bottom: 1rem;
+}
+#integrations #media-cards .media-card p {
+  font-size: 0.9rem;
 }
 
 #support-team {
@@ -375,8 +385,14 @@ section section, #site-footer section {
 #resources .posts article div {
   margin: 1.5rem;
 }
-#resources .posts article div h4 {
+#resources .posts article div h3 {
   margin-bottom: 0.25rem;
+}
+#resources .posts article div h3, #resources .posts article div p {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 #site-footer {
@@ -403,6 +419,7 @@ section section, #site-footer section {
   font-weight: 300;
   font-size: 1rem;
   margin-top: 1rem;
+  line-height: 1.5rem;
 }
 #site-footer .faq .list li.active {
   background-color: #1a1c1f;
@@ -502,12 +519,16 @@ ul, li {
 
 .open-account {
   padding: 0.875rem 2rem;
+  border: none;
   border-radius: 5px;
   background-color: var(--clr-primary);
   color: white;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
+}
+.open-account:focus {
+  outline-color: white;
 }
 
 #sign-up {
@@ -575,6 +596,7 @@ ul, li {
     object-fit: cover;
   }
   #testimonials figure figcaption {
+    width: 50%;
     padding-top: 7rem;
     padding-bottom: 7rem;
   }
@@ -607,7 +629,7 @@ ul, li {
     grid-row: 1/3;
     position: relative;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
   }
   #hero .intro img {
     border-radius: 8px;
@@ -686,8 +708,18 @@ ul, li {
   #site-footer .links {
     font-weight: 300px;
   }
-  #site-footer .links .dropdowns {
+  #site-footer .links ul:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #site-footer .links ul:nth-child(1) .dropdowns {
     font-weight: 300;
+  }
+  #site-footer .links ul:nth-child(1) .dropdowns span {
+    justify-content: center;
+  }
+  #site-footer .links ul:nth-child(1) .dropdowns li {
+    text-align: center;
   }
   #sign-up {
     display: none;
@@ -720,12 +752,43 @@ ul, li {
   }
   #site-header #menu .menu-dropdown .dropdown {
     justify-self: flex-end;
+    align-items: center;
     display: inline;
     display: flex;
     column-gap: 20px;
   }
+  #site-header #menu .menu-dropdown .dropdown * {
+    font-size: 0.7rem !important;
+  }
+  #site-header #menu .menu-dropdown .dropdown .dropdowns {
+    /*.drop
+    *  display: block */
+  }
   #site-header #menu .menu-dropdown .dropdown .dropdowns span img {
     display: none;
+  }
+  #site-header #menu .menu-dropdown .dropdown .dropdowns:hover .drop {
+    display: block;
+    position: absolute;
+    background: white;
+    transform: translateY(10px);
+    border-radius: 4px;
+  }
+  #site-header #menu .menu-dropdown .dropdown .dropdowns:hover .drop nav {
+    margin: 1rem;
+  }
+  #site-header #menu .menu-dropdown .dropdown .dropdowns:hover .drop nav p {
+    margin: 0;
+    font-size: 110% !important;
+  }
+  #site-header #menu .menu-dropdown .dropdown .dropdowns:hover .drop nav p:nth-child(1) {
+    font-weight: 500;
+  }
+  #site-header #menu .menu-dropdown .dropdown .dropdowns:hover .drop nav p:nth-child(2) {
+    display: block;
+  }
+  #site-header #menu .menu-dropdown .dropdown .dropdowns:hover .drop nav * {
+    color: black;
   }
   #features {
     padding-top: 6rem;
@@ -828,7 +891,7 @@ ul, li {
     margin: 54px 0 0;
   }
   #site-footer .links ul:nth-child(1) {
-    display: grid;
+    grid-template-columns: none;
     grid-template-rows: 1fr;
     grid-auto-flow: column;
     font-size: 15px;
@@ -839,6 +902,9 @@ ul, li {
   #site-footer .links ul:nth-child(1) .dropdowns {
     display: table;
     width: fit-content;
+  }
+  #site-footer .links ul:nth-child(1) .dropdowns li {
+    text-align: left;
   }
   #site-footer .links ul:nth-child(1) .dropdowns + .dropdowns {
     padding-left: 1rem;

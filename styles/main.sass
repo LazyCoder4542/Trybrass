@@ -10,6 +10,10 @@ $ff-body: "Matter SQ"
     margin: 0
     padding: 0
     box-sizing: border-box
+    &:focus
+        outline-width: 2px
+        outline-style: solid
+        outline-color: var(--clr-primary)
     &::selection
         background-color: var(--clr-primary)
         color: white
@@ -24,7 +28,7 @@ body
 h1, h2
     font-weight: 600
     line-height: 1.3em
-    font-size: 1.9rem
+    font-size: 1.875rem
     letter-spacing: -1px
 h3, h4
     font-weight: 500
@@ -123,6 +127,8 @@ p
                     .drop
                         p
                             margin-top: 1.5rem
+                            &:nth-child(2)
+                                display: none
 #container
     padding: 80px 0 0
 section, #site-footer
@@ -140,7 +146,7 @@ section, #site-footer
     background-color: var(--clr-neutral-1)
     text-align: left
     .intro
-        padding: 1rem 0
+        padding: 1rem 0 0
         img
             width: 100%
             opacity: 0.85
@@ -157,8 +163,7 @@ section, #site-footer
         h1
             color: white
         button
-            display: none
-            outline: none
+            display: none   
         p.sub
             margin: 24px 0 48px
     .sponsors
@@ -241,8 +246,7 @@ section, #site-footer
                 height: 3rem
 #integrations
     header
-        p
-            text-align: left
+        text-align: left
     #media-cards
         margin-top: 4rem
         overflow-x: scroll
@@ -258,6 +262,8 @@ section, #site-footer
                 margin-bottom: 2rem
             h3
                 margin-bottom: 1rem
+            p
+                font-size: 0.9rem
 #support-team
     padding: 0
     div:nth-child(1)
@@ -302,8 +308,13 @@ section, #site-footer
                 object-position: center center
             div
                 margin: 1.5rem
-                h4
+                h3
                     margin-bottom: 0.25rem
+                h3, p
+                    width: 100%
+                    white-space: nowrap
+                    text-overflow: ellipsis
+                    overflow: hidden
 #site-footer
     padding:
         top: 6rem
@@ -324,6 +335,7 @@ section, #site-footer
                     font-weight: 300
                     font-size: 1rem
                     margin-top: 1rem
+                    line-height: 1.5rem
                 &.active
                     background-color: #1a1c1f
                     border: none
@@ -404,12 +416,15 @@ ul,li
     color: inherit
 .open-account
     padding: 0.875rem 2rem
+    border: none
     border-radius: 5px
     background-color: var(--clr-primary)
     color: white
     font-family: inherit
     font-weight: 500
     font-size: 14px
+    &:focus
+        outline-color: white
 #sign-up
     background: var(--clr-primary)
     width: 100%
@@ -475,6 +490,7 @@ ul,li
                 width: 50%
                 object-fit: cover
             figcaption
+                width: 50%
                 padding:
                     top: 7rem
                     bottom: 7rem
@@ -503,7 +519,7 @@ ul,li
             grid-row: 1/3
             position: relative
             top: 50%
-            transform: translateY(-40%)
+            transform: translateY(-50%)
             img
                 border-radius: 8px
         .tag-line
@@ -569,8 +585,16 @@ ul,li
                 margin-top: 0
         .links
             font-weight: 300px
-            .dropdowns
-                font-weight: 300
+            ul:nth-child(1)
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                .dropdowns
+                    font-weight: 300
+                    span
+                        justify-content: center
+                    li
+                        text-align: center
+
     #sign-up
         display: none
 
@@ -598,13 +622,36 @@ ul,li
                     display: inline
                 .dropdown
                     justify-self: flex-end
+                    align-items: center
                     display: inline
                     display: flex
                     column-gap: 20px
+                    *
+                        font-size: 0.7rem !important
                     .dropdowns
+                        /*.drop
+                            display: block
                         span
                             img
                                 display: none
+                        &:hover
+                            .drop
+                                display: block
+                                position: absolute
+                                background: white
+                                transform: translateY(10px)
+                                border-radius: 4px
+                                nav
+                                    margin: 1rem
+                                    p
+                                        margin: 0
+                                        font-size: 110% !important
+                                        &:nth-child(1)
+                                            font-weight: 500
+                                        &:nth-child(2)
+                                            display: block
+                                    *
+                                        color: black
     #features
         padding:
             top: 6rem
@@ -690,7 +737,7 @@ ul,li
         .links
             margin: 54px 0 0
             ul:nth-child(1)
-                display: grid
+                grid-template-columns: none
                 grid-template-rows: 1fr
                 grid-auto-flow: column
                 font-size: 15px
@@ -699,6 +746,8 @@ ul,li
                 .dropdowns
                     display: table
                     width: fit-content
+                    li
+                        text-align: left
                     & + .dropdowns
                         padding-left: 1rem
         .platforms
