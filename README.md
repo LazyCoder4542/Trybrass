@@ -1,6 +1,6 @@
 # Trybrass
 This is a copy of a network that provides banking services with the main purpose of aiding growing businesses.
-[Original Page](https://helicarrier.studio)
+[Original Page](https://trybrass.com)
 
 ## Table of contents
 
