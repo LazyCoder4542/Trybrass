@@ -1,29 +1,29 @@
 # Trybrass
-
-This is a replica of the [TryBrass](https://www.trybrass.com) site.
+This is a copy of a network that provides cryptocurrency infrastructures for africans.
+[Original Page](https://helicarrier.studio)
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Continued development](#continued-development)
+- [What I Learnt](#what-i-learnt)
+- [Contributors](#contributors)
 - [Author](#author)
+
+
 
 ## Overview
 
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+### Screenshot
+![trybrass netlify app](https://user-images.githubusercontent.com/104224084/186536486-790e3a35-6c0b-489e-a8be-51b321a9a020.png)
 
 ### Links
 
-- Solution URL: [HTML](https://github.com/LazyCoder4542/Trybrass)
+- Solution URL: [Here](https://github.com/LazyCoder4542/Trybrass/find/main)
 - Live Site URL: [Here](https://trybrass.netlify.app/)
 
 ## My process
@@ -35,14 +35,21 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [JQuery](https://jquery.com/) - JS library
+- Jquery Library
 
+### What I Learnt
+- Building Loading Screen while page loads.
+- Tabs and navigations within a page.
+- Creating Accordions from scratch with JavaScript
+- More Understanding in CSS positioning, Grids and Flexes.
 
 ### Continued development
 
 - Improve in JQuery
 - Starting Node.js
 
+## Contributors
+- [Blessing Omotoyinbo](https://www.twitter.com/blsnomot)
 
 ## Author
 
