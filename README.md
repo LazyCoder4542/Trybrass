@@ -1,5 +1,5 @@
 # Trybrass
-This is a copy of a network that provides cryptocurrency infrastructures for africans.
+This is a copy of a network that provides banking services with the main purpose of aiding growing businesses.
 [Original Page](https://helicarrier.studio)
 
 ## Table of contents
